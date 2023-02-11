@@ -19,37 +19,36 @@ function generatePassword() {
     return;
   }
   if (upperCase === true) {
-    var result = uppercaseLe.concat(result);
-    var upperCase = confirm('Would you like your password to contain lowercase letters?')
+     result = result.concat(uppercaseLe)
+    var lowerCase = confirm('Would you like your password to contain lowercase letters?')
   } else {
     var lowerCase = confirm('Would you like your password to contain lowercase letters?')
 
   }
 
   if (lowerCase === true) {
-    var result = lowercaseLe.concat(result);
+     result = result.concat(lowercaseLe);
     var number = confirm('Would you like your password to contain numbers?')
   } else {
-    var number = confirm('Would you like your password to contain numbers?')
+     var number = confirm('Would you like your password to contain numbers?')
   }
 
   if (number === true) {
-    var result = numbersLe.concat(result);
+     result = result.concat(numbersLe);
     var special = confirm('Would you like your password to contain special characters?')
   } else {
     var special = confirm('Would you like your password to contain special characters?')
   }
   if (special === true) {
-    var result = specialLe.concat(result);
+     result = result.concat(specialLe);
     alert('Your password will be generated now!')
   } else {
     alert('Your password will be generated now!')
   }
-  var passEnd = '';
-  for (var i = 0; i < passLength; i++) {
-    passEnd += result[Math.floor(Math.random() * i)]
+  var passEnd ='';
+  for (var i = 0, n= result.length; i < passLength; i++) {
+    passEnd += result[Math.floor(Math.random()* n)]
   }
-  console.log(result);
   return passEnd;
 }
 
