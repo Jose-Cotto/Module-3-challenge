@@ -6,7 +6,7 @@ var lowercaseLe = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 var uppercaseLe = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbersLe = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialLe = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "{", "}", "[", "]", ":", ";", ",", ".", "<", ">", "?", "/", "`", "~"];
-var result;
+var result = [uppercaseLe, lowercaseLe, numbersLe, specialLe];
 
 
 function generatePassword() {
@@ -19,10 +19,11 @@ function generatePassword() {
     return;
   }
   if (upperCase === true) {
-    var result = uppercaseLe.concat(result);
+    // var result = uppercaseLe.concat(result);
     var upperCase = confirm('Would you like your password to contain lowercase letters?')
   } else {
     var lowerCase = confirm('Would you like your password to contain lowercase letters?')
+    var result = delete result[0];
   }
 
   if (lowerCase === true) {
@@ -38,20 +39,17 @@ function generatePassword() {
   } else {
     var special = confirm('Would you like your password to contain special characters?')
   }
-  if(special === true) {
+  if (special === true) {
     var result = specialLe.concat(result);
     alert('Your password will be generated now!')
   } else {
     alert('Your password will be generated now!')
   }
-
-
-
-
-
-
-
-  return'This will display the end result';
+  var passEnd = '';
+  for (var i = 0; i < passLength; i++) {
+    passEnd += (Math.floor(Math.random() * i));
+  }
+  return passEnd;
 }
 
 // Write password to the #password input
