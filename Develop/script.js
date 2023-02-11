@@ -19,7 +19,7 @@ function generatePassword() {
     return;
   }
   if (upperCase === true) {
-     result = result.concat(uppercaseLe)
+    result = result.concat(uppercaseLe)
     var lowerCase = confirm('Would you like your password to contain lowercase letters?')
   } else {
      lowerCase = confirm('Would you like your password to contain lowercase letters?')
@@ -27,27 +27,27 @@ function generatePassword() {
   }
 
   if (lowerCase === true) {
-     result = result.concat(lowercaseLe);
+    result = result.concat(lowercaseLe);
     var number = confirm('Would you like your password to contain numbers?')
   } else {
-      number = confirm('Would you like your password to contain numbers?')
+     number = confirm('Would you like your password to contain numbers?')
   }
 
   if (number === true) {
-     result = result.concat(numbersLe);
+    result = result.concat(numbersLe);
     var special = confirm('Would you like your password to contain special characters?')
   } else {
-     special = confirm('Would you like your password to contain special characters?')
+   special = confirm('Would you like your password to contain special characters?')
   }
   if (special === true) {
-     result = result.concat(specialLe);
+    result = result.concat(specialLe);
     alert('Your password will be generated now!')
   } else {
     alert('Your password will be generated now!')
   }
-  var passEnd ='';
-  for (var i = 0, n= result.length; i < passLength; i++) {
-    passEnd += result[Math.floor(Math.random()* n)]
+  var passEnd = '';
+  for (var i = 0, n = result.length; i < passLength; i++) {
+    passEnd += result[Math.floor(Math.random() * n)]
   }
   console.log(result)
   return passEnd;
@@ -63,7 +63,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button. When button is clicked, then run write password function.
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword,);
 
 
 
