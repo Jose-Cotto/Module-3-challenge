@@ -22,7 +22,7 @@ function generatePassword() {
      result = result.concat(uppercaseLe)
     var lowerCase = confirm('Would you like your password to contain lowercase letters?')
   } else {
-    var lowerCase = confirm('Would you like your password to contain lowercase letters?')
+     lowerCase = confirm('Would you like your password to contain lowercase letters?')
 
   }
 
@@ -30,14 +30,14 @@ function generatePassword() {
      result = result.concat(lowercaseLe);
     var number = confirm('Would you like your password to contain numbers?')
   } else {
-     var number = confirm('Would you like your password to contain numbers?')
+      number = confirm('Would you like your password to contain numbers?')
   }
 
   if (number === true) {
      result = result.concat(numbersLe);
     var special = confirm('Would you like your password to contain special characters?')
   } else {
-    var special = confirm('Would you like your password to contain special characters?')
+     special = confirm('Would you like your password to contain special characters?')
   }
   if (special === true) {
      result = result.concat(specialLe);
@@ -49,6 +49,7 @@ function generatePassword() {
   for (var i = 0, n= result.length; i < passLength; i++) {
     passEnd += result[Math.floor(Math.random()* n)]
   }
+  console.log(result)
   return passEnd;
 }
 
