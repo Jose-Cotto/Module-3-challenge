@@ -13,7 +13,6 @@ function generatePassword() {
   var passLength = prompt('How long would you like your password? (8-128)');
   if (passLength >= passMin && passLength <= passMax) {
     alert('Your password will be ' + passLength + ' characters long')
-    var upperCase = confirm('Would you like your password to contain uppercase letters?');
   } else {
     alert('Error, Please use a valid number');
     return null;
@@ -21,18 +20,25 @@ function generatePassword() {
 
   var upperCase = confirm('Would you like your password to contain uppercase letters?');
 
-  var upperCase = confirm('Would you like your password to contain lowercase letters?');
+  var lowerCase = confirm('Would you like your password to contain lowercase letters?');
 
-  var upperCase = confirm('Would you like your password to contain numbers?');
+  var numbers = confirm('Would you like your password to contain numbers?');
 
-  var upperCase = confirm('Would you like your password to contain special characters?');
-  
-  var passEnd = '';
-  for (var i = 0, n = result.length; i < passLength; i++) {
-    passEnd += result[Math.floor(Math.random() * n)]
+  var special = confirm('Would you like your password to contain special characters?');
+
+  if (upperCase === false && lowerCase === false && numbers === false && special === false) {
+    alert('You must select one character type!')
+    return null;
   }
-  console.log(result)
-  return passEnd;
+
+  var passwordObject = {
+    passLength: passLength,
+    upperCase: upperCase,
+    lowerCase: lowerCase,
+    numbers: numbers,
+    special: special
+    
+  };
 }
 
 // Write password to the #password input
