@@ -43,10 +43,14 @@ function generatePassword() {
     return null;
   }
   var passEnd = '';
-  for(var i = 0, n = result.length; i < passLength; i++) {
+  for (var i = 0, n = result.length; i < passLength; i++) {
     passEnd += result[Math.floor(Math.random() * n)]
-    return passEnd
+
   }
+  console.log(result)
+  result = [];
+  return passEnd
+
 }
 
 // Write password to the #password input
