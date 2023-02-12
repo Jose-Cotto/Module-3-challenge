@@ -16,35 +16,17 @@ function generatePassword() {
     var upperCase = confirm('Would you like your password to contain uppercase letters?');
   } else {
     alert('Error, Please use a valid number');
-    return;
-  }
-  if (upperCase === true) {
-    result = result.concat(uppercaseLe)
-    var lowerCase = confirm('Would you like your password to contain lowercase letters?')
-  } else {
-     lowerCase = confirm('Would you like your password to contain lowercase letters?')
-
+    return null;
   }
 
-  if (lowerCase === true) {
-    result = result.concat(lowercaseLe);
-    var number = confirm('Would you like your password to contain numbers?')
-  } else {
-     number = confirm('Would you like your password to contain numbers?')
-  }
+  var upperCase = confirm('Would you like your password to contain uppercase letters?');
 
-  if (number === true) {
-    result = result.concat(numbersLe);
-    var special = confirm('Would you like your password to contain special characters?')
-  } else {
-   special = confirm('Would you like your password to contain special characters?')
-  }
-  if (special === true) {
-    result = result.concat(specialLe);
-    alert('Your password will be generated now!')
-  } else {
-    alert('Your password will be generated now!')
-  }
+  var upperCase = confirm('Would you like your password to contain lowercase letters?');
+
+  var upperCase = confirm('Would you like your password to contain numbers?');
+
+  var upperCase = confirm('Would you like your password to contain special characters?');
+  
   var passEnd = '';
   for (var i = 0, n = result.length; i < passLength; i++) {
     passEnd += result[Math.floor(Math.random() * n)]
