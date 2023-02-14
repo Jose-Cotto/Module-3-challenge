@@ -20,6 +20,8 @@ N/A
 To use this webpage you can click the button labeled generate password to get started! Once clicked you will be taken through a series of prompts that require you to select the length and at least one character set you would like in your password. Then just copy and save!
 
 ![Screenshot of working webpage](./Develop/Images/192.168.1.86_51033_index.html.png)
+Link to live site: (https://jose-cotto.github.io/Module-3-challenge/)
+
 
 ## Credits
 
